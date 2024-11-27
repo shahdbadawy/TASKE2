@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Surveillance Camera System Security</title>
+
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        #home {
+    background-image: url('imgs/BackG.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 10px;
+}
+
+
+        #home h1 {
+            font-size: 3em;
+            color: #fff;
+        }
+        #home p{
+            color: #fff;
+        }
+
+        #services, #security, #contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #services h2, #security h2, #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            
+        }
+
+        /* Make .row a flex container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Align the items nicely */
+            gap: 20px; /* Add some space between cards */
+        }
+
+        /* Style for the .card to make them next to each other */
+        .card {
+            width: 30%; /* Adjust the width as needed */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            border: none;
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Ensure the images inside the cards look good */
+        .card img {
+            width: 100%;
+            height: 250px; /* You can adjust the height as needed */
+            object-fit: cover;
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design: Adjust the layout for smaller screens */
+        @media screen and (max-width: 768px) {
+            .card {
+                width: 45%; /* Make the cards take up more space on medium screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 100%; /* Stack the cards on very small screens */
+            }
+        }
+
+        /* Responsive Navbar */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .navbar .icon {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 14px 16px;
+                cursor: pointer;
+            }
+        }
+                /* CSS محدث لقسم الاتصال */
+                #contact {
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #contact p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* تنسيق النموذج */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تنسيق الحقول */
+        form div {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+            transition: border 0.3s ease;
+        }
+
+        /* إضافة تأثير التغيير في الحدود عند التفاعل مع الحقول */
+        form input[type="text"]:focus,
+        form input[type="email"]:focus {
+            border-color: #f39c12;
+            outline: none;
+        }
+
+        /* تنسيق الزر */
+        button[type="submit"] {
+            background-color: #96681d;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        /* تغيير اللون عند المرور فوق الزر */
+        button[type="submit"]:hover {
+            background-color: #653d19;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" class="logo">Security Systems</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#security">Cybersecurity</a>
+        <a href="#contact">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+            &#9776;
+        </a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" style="background-image: url('imgs/BackG.jpeg'); background-size: cover; background-position: center;">
+        <h1>Welcome to Surveillance Camera System Security</h1>
+        <p>Your trusted partner in securing surveillance systems.</p>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <h2>Our Services</h2>
+        <p>We provide a variety of services for your surveillance and security needs.</p>
+        <div class="row">
+            <!-- Camera 1 -->
+            <div class="card">
+                <img src="imgs/CCTV Camera.jpeg" alt="CCTV Camera">
+                <h5>CCTV Camera</h5>
+                <p>High-definition surveillance with wide-angle lenses for better coverage.</p>
+            </div>
+            <!-- Camera 2 -->
+            <div class="card">
+                <img src="imgs/IP camera.jpeg" alt="IP Camera">
+                <h5>IP Camera</h5>
+                <p>IP cameras for high-quality, remote monitoring with cloud storage support.</p>
+            </div>
+            <!-- Camera 3 -->
+            <div class="card">
+                <img src="imgs/wireless camera.jpeg" alt="Wireless Camera">
+                <h5>Wireless Camera</h5>
+                <p>Easy installation with wireless cameras for simple setup and maintenance.</p>
+            </div>
+            <div class="card">
+                <img src="imgs/Motion Sensor.jpeg" alt="Motion Sensor">
+                <h5>Motion Sensor</h5>
+                <p>Advanced motion detection technology for smart security systems and alarm triggers.</p>
+            </div>
+            <!-- New Product 2: Security Light -->
+            <div class="card">
+                <img src="imgs/Security Light.jpeg" alt="Security Light">
+                <h5>Security Light</h5>
+                <p>High-efficiency security lights that activate with motion, keeping your property safe at night.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Section -->
+    <section id="security" class="bg-primary text-light">
+        <h2>Cybersecurity</h2>
+        <p>Protecting your surveillance systems from cyber threats is essential. Here's how we secure them:</p>
+        <div class="row">
+            <!-- Firewall -->
+            <div class="card">
+                <img src="imgs/firewall protection.jpeg" alt="Firewall Protection" width="200" height="200">
+                <h5>Firewall Protection</h5>
+                <p>Our firewall services safeguard your network and data from external threats.</p>
+            </div>
+            <!-- Encryption -->
+            <div class="card">
+                <img src="imgs/Data Encryption.jpeg" alt="Data Encryption">
+                <h5>Data Encryption</h5>
+                <p>Advanced encryption techniques to secure your sensitive video footage and data.</p>
+            </div>
+            <!-- Antivirus -->
+            <div class="card">
+                <img src="imgs/Antivirus Protection.jpeg" alt="Antivirus Protection">
+                <h5>Antivirus Protection</h5>
+                <p>Strong antivirus software to protect your cameras and systems from malware and viruses.</p>
+            </div>
+            <div class="card">
+                <img src="imgs/Security Monitoring.jpeg" alt="Security Monitoring">
+                <h5>Security Monitoring</h5>
+                <p>24/7 security monitoring to detect and respond to potential cyber threats in real-time.</p>
+            </div>
+            <!-- New Product 2: Multi-Factor Authentication -->
+            <div class="card">
+                <img src="imgs/Multi-Factor Authentication.jpeg" alt="Multi-Factor Authentication">
+                <h5>Multi-Factor Authentication</h5>
+                <p>Multi-layer authentication systems to ensure only authorized users access your surveillance data.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out for more information or inquiries.</p>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <button type="submit" class="btn-warning">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Surveillance Camera System Security. All Rights Reserved.@Shahd_elasad.</p>
+    </footer>
+
+    <!-- JavaScript to toggle Navbar -->
+    <script>
+        function toggleNav() {
+            var x = document.getElementsByClassName('navbar')[0];
+            if (x.className === 'navbar') {
+                x.className += ' responsive';
+            } else {
+                x.className = 'navbar';
+            }
+        }
+    </script>
+
+</body>
+</html>
